@@ -1,0 +1,24 @@
+#!/bin/bash
+touch 'obs.pwr.md'
+echo "on" > 'obs.pwr.md'
+trigger_status(){
+out="true"
+t1="$(cat obs.pwr.md)"
+[ "$t1" == "on" ] || out="false"
+echo "$out"
+}
+while :
+do
+	while [ "$(trigger_status)" == "true" ]
+	do
+		echo "logged $(date +%T)" >> ore.monitor.txt
+		sleep 1
+		break
+	done
+#	echo "logged $(date +%T)" >> heart.monitor.txt
+#	sleep 1
+source 'heart.beat.sh'
+done
+#read -p "Press any key to continue" x
+#$SHELL
+#PAUSE
