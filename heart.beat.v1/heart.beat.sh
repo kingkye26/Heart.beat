@@ -22,6 +22,3 @@ do
 	echo "logged $(date +%T)" >> heart.monitor.txt
 	sleep 1
 done
-#read -p "Press any key to continue" x
-#$SHELL
-#PAUSE
