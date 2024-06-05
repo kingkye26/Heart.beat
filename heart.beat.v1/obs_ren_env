@@ -19,6 +19,3 @@ do
 #	sleep 1
 source 'heart.beat.sh'
 done
-#read -p "Press any key to continue" x
-#$SHELL
-#PAUSE
